@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let g = [];
+        let f = [];
+        let s = 0;
+        do {
+            f = [];
+            for (let i = 0; i < 8; i++) {
+                f.push(Math.floor(Math.random() * 10000));
+            }
+            g = f.filter(function (value) {
+                if (value % 2 === 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+            s++;
+        } while (g.length !== 0);
+        console.log(g);
+        console.log(f);
+        console.log(s);
+
+    </script>
+</body>
+
+</html>
