@@ -1,0 +1,4 @@
+1.SELECT `idObiekt`, `nazwa` , `plik` FROM `obiekty` WHERE panstwo LIKE "Islandia";
+2.SELECT `nazwa`, `opis`, `plik`, `nazwaCechy`, `wartoscCechy`, `rodzaj` FROM `obiekty`,`rodzaje` WHERE rodzaje.idRodzaj = obiekty.idRodzaj AND idObiekt = 46;
+3.SELECT obiekty.nazwa FROM `obiekty` WHERE panstwo LIKE "Islandia" AND obiekty.idRodzaj = 10;
+4.SELECT `rodzaj`,COUNT(obiekty.idRodzaj) "Liczba obiektów" FROM `rodzaje`,obiekty WHERE rodzaje.idRodzaj = obiekty.idRodzaj GROUP BY rodzaje.rodzaj;
