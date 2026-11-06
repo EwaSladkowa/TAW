@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="board">
+        <section class="column" id="todo">
+            <h2>Do zrobienia</h2>
+            <article class="card priority-low" data-id="101">
+                <p class="title">Zakupy spozywcze</p>
+                <span class="badge">Dom</span>
+            </article>
+            <article class="card priority-high" data-id="102">
+                <p class="title">Oplacic serwer</p>
+                <span class="badge">Praca</span>
+            </article>
+            <article class="card priority-high" data-id="103">
+                <p class="title">Wyslac raport kwartalny</p>
+                <span class="badge">Praca</span>
+            </article>
+        </section>
+
+        <section class="column" id="in-progress">
+            <h2>W trakcie</h2>
+            <article class="card priority-medium" data-id="104">
+                <p class="title">Refaktoryzacja kodu</p>
+                <span class="badge">Praca</span>
+            </article>
+        </section>
+
+        <footer id="summary">
+            Liczba zadan pilnych: <span id="urgent-count">0</span>
+        </footer>
+    </main>
+</body>
+
+</html>
+<!-- 
+let h = document.querySelector('#in-progress h2'); 
+h.innerText = 'W trakcie(1)';
+let f = document.querySelector('.priority-high');
+f.style.border = "2px solid red";
+
+let k = document.querySelectorAll('.priority-high');
+function myFunction(item) {
+  console.log(item.getAttribute('#data-id'));
+}
+k.forEach(myFunction)
+
+let l = document.querySelector('#urgent-count');
+l.innerHTML = k.length;
+
+let p = document.querySelector('#todo');
+console.log(p.querySelectorAll('.card').length);
+-->
